@@ -1,0 +1,9 @@
+@startuml AD2
+start
+:click on add list button;
+:empty current list;
+:change loadedlist value to 0;
+:name value is set to "";
+:system creates empty todolist with no name;
+stop
+@enduml

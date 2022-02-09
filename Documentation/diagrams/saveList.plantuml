@@ -1,0 +1,23 @@
+@startuml AD3
+start
+:user is on a list;
+:User clicks save button; 
+:convert list to a list object;
+if (loaded list = 0?) equals (no) then
+if (existing list?) equals (yes) then
+:prompt the user if they want to replace it;
+:if the user accepts;
+:get the id of the soon to be replaced list;
+:get the position of the soon to be replaced list and save it somewhere;
+:delete the replaced list from lists array;
+:move the replacee to the position of the replaced in the lists array;
+else (no)
+:add it to the lists array;
+endif
+:rerender the lists container passing lists array as its parameter;
+:;
+else (yes)
+endif
+:save the list as a new list;
+stop
+@enduml

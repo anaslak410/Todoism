@@ -1,0 +1,199 @@
+:root {
+  --blue: #1D3461;
+  --red: #611d1d;
+  --white: #F7F7FF;
+  --Dwhite: #9393a0;
+;
+}
+/* default values */
+html {
+    font-family: sans-serif;
+}
+.completedTodo {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+button {
+  margin: 0.5em;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 13px 23px;
+  border: none;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  background: var(--white);
+  color: var(--blue);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.todoRemoveButt {
+  font-size: large;
+  padding: 10px 10px;
+}
+.todoRoot {
+  background-color: var(--white);
+  padding: 1em;
+}
+.todoRoot:hover {
+  background-color: var(--blue);
+}
+.todoRoot:hover > :not(.todoInput):not(.todoRemoveButt) {
+  color: var(--white);
+}
+.todoInput {
+
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 4px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+.todoText {
+  font-size: 1.5em;
+  margin: 3em 3em;
+}
+.todoCheckBox {
+
+  width:30px;
+  height:30px;;
+  font-size: 14px;
+  font-weight: normal;
+  border: 1px solid rgb(137, 151, 155);
+  transition: border-color 150ms ease-in-out 0s;
+  outline: none;
+  color: var(--blue);
+  background-color: rgb(255, 255, 255);
+
+}
+.todoCheckBox:hover {
+  color: var(--Dwhite);
+}
+ol {
+  list-style: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {display: block;}
+
+button:hover {
+  background-color: var(--Dwhite);
+}
+
+/* list bar */
+a {
+  list-style: none;
+  color: var(--blue);
+  text-decoration: none;
+}
+header {
+  background-color: var(--blue);
+  flex-shrink: 0;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+}
+body {
+    height: 100%;   
+    margin: 0px;  /* removes default style */
+    display: flex;  /* enables flex content for its children */
+    flex-direction: column;  /* places the left and right headers above the bottom content */
+}
+#content {
+  margin-top: 8em;
+}
+nav li ul {
+	position: absolute;
+	visibility: hidden;
+}
+nav li:hover ul {
+	visibility: visible;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+#pageTitle{
+  background-color: #1D3461;
+  margin-right: auto;
+  color: var(--white);
+}
+nav {
+  background-color: #222222;
+  margin-right: auto;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+.listItem {
+  padding: 1em;
+  color: var(--blue);
+  border-radius: 8px;
+}
+.listItem:hover {
+  background-color: var(--Dwhite);
+}
+#addList {
+  text-align: center;
+  font-size: 2em;
+  border-radius: 8px;
+}
+#addList:hover {
+  background-color: var(--Dwhite);
+}
+.dropdown{
+  color: var(--white);
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: red;
+  position: relative;
+  padding-bottom: 3em;
+}
+/* list name field */
+#listNameField {
+
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 4px;
+  margin-left: 25em;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+.invalidInputField {
+  background-color: var(--red);
+}
+#replaceListDial {
+  border: none;
+  box-shadow: 6px 6px 20px rgb(26 26 26 / 10%)
+}
+#replaceListTitle{
+  font-size: larger;
+  font-weight: bold;
+}

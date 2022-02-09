@@ -1,0 +1,11 @@
+' This diagram is for creating a list of todo
+@startuml AD1
+start
+:move mouse up;
+:click on lists section;
+:System brings up all lists and plus button on top;
+:click plus button;
+:System prompts user to input name of the list;
+stop
+@enduml
+

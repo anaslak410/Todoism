@@ -1,0 +1,14 @@
+@startuml AD4
+start
+:user is on a list;
+:User clicks drop down menu;
+:user clicks on one of the saved lists;
+if (user is not on an empty list?) equals (no) then
+:prompt the user if they want to save changes;
+:save the list as a new list;
+else (yes)
+endif
+:change loadedlist to the loaded lists id;
+:populate the todos container with the todos of the list;
+stop
+@enduml
